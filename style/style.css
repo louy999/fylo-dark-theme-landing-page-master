@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(218deg, 28%, 13%);
+  font-family: "Open Sans", sans-serif;
+}
+body #container {
+  background-color: hsl(219deg, 30%, 18%);
+  margin: 0 auto;
+}
+body #container header {
+  margin: 0 auto;
+  width: 80vw;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+body #container header #logo {
+  width: 50%;
+  height: 100%;
+}
+body #container header #logo img {
+  width: 90px;
+  height: 30px;
+}
+body #container header ul {
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+}
+body #container header ul li {
+  color: hsl(0deg, 0%, 100%);
+  opacity: 0.5;
+  list-style: none;
+  margin: 0 10px;
+}
+body #container main {
+  width: 70vw;
+  margin: 30px auto;
+}
+body #container main #landing {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: hsl(0deg, 0%, 100%);
+  flex-wrap: wrap;
+}
+body #container main #landing img {
+  z-index: 6565;
+  width: 300px;
+}
+body #container main #landing h3 {
+  width: 50vw;
+  font-size: 20px;
+  text-align: center;
+  z-index: 6565;
+}
+body #container main #landing p {
+  z-index: 6565;
+  text-align: center;
+  width: 50vw;
+  font-size: 14px;
+  padding: 20px;
+  opacity: 0.5;
+}
+body #container main #landing input {
+  padding: 10px 40px;
+  z-index: 6565;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 15px;
+  background: hsl(198deg, 60%, 50%);
+  border: none;
+  cursor: pointer;
+  margin: 0 30vw;
+}
+body #container main #body-landing img {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  top: 50vh;
+}/*# sourceMappingURL=style.css.map */

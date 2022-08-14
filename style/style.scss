@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+@import "./color";
+// open sans => body  => font-family: 'Open Sans', sans-serif;
+// raleway => Headings, Call-to-actions, Header Navigation =>font-family: 'Raleway', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $Dark-Blue-main-background;
+  font-family: "Open Sans", sans-serif;
+  #container {
+    background-color: $Dark-Blue-testimonials-background;
+    margin: 0 auto;
+    header {
+      margin: 0 auto;
+      width: 80vw;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      height: 70px;
+      #logo {
+        width: 50%;
+        height: 100%;
+        img {
+          width: 90px;
+          height: 30px;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 20vw;
+        li {
+          color: $White;
+          opacity: 0.5;
+          list-style: none;
+          margin: 0 10px;
+        }
+      }
+    }
+    main {
+      width: 70vw;
+      margin: 30px auto;
+      #landing {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        color: $White;
+        flex-wrap: wrap;
+        img {
+          z-index: 6565;
+          width: 300px;
+        }
+        h3 {
+          width: 50vw;
+          font-size: 20px;
+          text-align: center;
+          z-index: 6565;
+        }
+        p {
+          z-index: 6565;
+          text-align: center;
+          width: 50vw;
+          font-size: 14px;
+          padding: 20px;
+          opacity: 0.5;
+        }
+        input {
+          padding: 10px 40px;
+          z-index: 6565;
+          color: $White;
+          border-radius: 15px;
+          background: $Blue-inside-call-to-action-gradient;
+          border: none;
+          cursor: pointer;
+          margin: 0 30vw;
+        }
+      }
+      #body-landing {
+        img {
+          z-index: 5;
+          position: absolute;
+          left: 0;
+          width: 100vw;
+          top: 50vh;
+        }
+      }
+    }
+  }
+}
