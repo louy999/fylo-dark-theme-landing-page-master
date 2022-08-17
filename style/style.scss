@@ -7,12 +7,17 @@
   margin: 0;
   padding: 0;
 }
+li,
+input[type="button"] {
+  cursor: pointer;
+}
+
 body {
-  background-color: $Dark-Blue-main-background;
   font-family: "Open Sans", sans-serif;
+  // background-color: red;
   #container {
-    background-color: $Dark-Blue-testimonials-background;
     margin: 0 auto;
+    background-color: $Dark-Blue-testimonials-background;
     header {
       margin: 0 auto;
       width: 80vw;
@@ -31,60 +36,317 @@ body {
       ul {
         display: flex;
         justify-content: space-between;
-        width: 20vw;
+        width: 30vw;
         li {
           color: $White;
           opacity: 0.5;
           list-style: none;
+
           margin: 0 10px;
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }
-    main {
+    #landing {
       width: 70vw;
-      margin: 30px auto;
-      #landing {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      color: $White;
+      flex-wrap: wrap;
+      img {
+        z-index: 6565;
+        width: 300px;
+      }
+      h3 {
+        width: 50vw;
+        font-size: 20px;
+        text-align: center;
+        z-index: 6565;
+      }
+      p {
+        z-index: 6565;
+        text-align: center;
+        width: 50vw;
+        font-size: 14px;
+        padding: 20px;
+        opacity: 0.5;
+      }
+      input {
+        padding: 10px 40px;
+        z-index: 6565;
         color: $White;
-        flex-wrap: wrap;
-        img {
-          z-index: 6565;
-          width: 300px;
-        }
-        h3 {
-          width: 50vw;
-          font-size: 20px;
-          text-align: center;
-          z-index: 6565;
-        }
-        p {
-          z-index: 6565;
-          text-align: center;
-          width: 50vw;
-          font-size: 14px;
-          padding: 20px;
-          opacity: 0.5;
-        }
-        input {
-          padding: 10px 40px;
-          z-index: 6565;
-          color: $White;
-          border-radius: 15px;
-          background: $Blue-inside-call-to-action-gradient;
-          border: none;
-          cursor: pointer;
-          margin: 0 30vw;
+        border-radius: 15px;
+        background: $Blue-inside-call-to-action-gradient;
+        border: none;
+        cursor: pointer;
+        margin: 0 30vw;
+        // opacity: 0.5;
+        &:hover {
+          background-color: $Cyan-inside-call-to-action-gradient;
         }
       }
-      #body-landing {
+    }
+  }
+  main {
+    width: 100%;
+    background-color: $Dark-Blue-main-background;
+
+    // margin: 30px auto;
+
+    #body-landing {
+      .bg {
+        width: 90vw;
+        position: absolute;
+        left: 0;
+        top: 29vh;
+
+        // bottom: 50px;
+        // z-index: -1;
+      }
+      .fec {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        color: $White;
+        text-align: center;
+        p {
+          font-size: 13px;
+          width: 86%;
+          opacity: 50%;
+        }
         img {
-          z-index: 5;
-          position: absolute;
-          left: 0;
-          width: 100vw;
-          top: 50vh;
+          width: 50px;
+        }
+        @for $i from 1 through 4 {
+          #con-#{$i} {
+            position: relative;
+            width: 50%;
+            padding: 5px;
+            // margin: 10px;
+          }
+        }
+      }
+    }
+    #stay {
+      display: flex;
+      margin: 50px 0;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      color: $White;
+      align-items: center;
+      img {
+        width: 45%;
+      }
+      .para {
+        width: 45%;
+        h3 {
+          font-weight: 700;
+          font-size: 20px;
+          text-transform: capitalize;
+          width: 70%;
+        }
+        p {
+          font-size: 14px;
+          opacity: 50%;
+          margin: 15px 0;
+          width: 90%;
+        }
+      }
+      a {
+        color: $Cyan-inside-call-to-action-gradient;
+        display: flex;
+        align-items: center;
+        &:hover {
+          color: $White;
+          opacity: 0.5;
+        }
+        img {
+          margin: 0 5px;
+          width: 20px;
+        }
+      }
+    }
+    #commit {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      margin: 100px auto;
+      > img {
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        transform: translateY(-40px);
+      }
+      > div {
+        background-color: $Dark-Blue-testimonials-background;
+        margin: 10px;
+        padding: 30px 10px;
+        border-radius: 10px;
+        z-index: 55;
+        img {
+          width: 30px;
+          border-radius: 50%;
+        }
+        p {
+          color: $White;
+          margin: 10px 0;
+          font-size: 15px;
+          width: 100%;
+        }
+      }
+      .pro {
+        display: flex;
+        justify-content: space-between;
+        img {
+          display: inline;
+          width: 15%;
+        }
+        > div {
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          span:first-of-type {
+            width: 100%;
+            color: $White;
+            font-size: 13px;
+          }
+          span:last-of-type {
+            opacity: 50%;
+            width: 100%;
+            color: $White;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    #email {
+      width: 80%;
+      transform: translateY(20vh);
+      margin: 100px auto;
+      margin-bottom: 0;
+      background-color: $Dark-Blue-testimonials-background;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 50px;
+      border-radius: 10px;
+      h2 {
+        color: $White;
+        width: 100%;
+        font-weight: 700;
+        text-align: center;
+        font-size: 30px;
+      }
+      p {
+        color: $White;
+        text-align: center;
+        opacity: 70%;
+        margin: 20px 0;
+        width: 100%;
+      }
+      .email {
+        display: flex;
+        justify-content: space-between;
+        input[type="email"] {
+          padding: 10px;
+          outline: none;
+          border-radius: 15px;
+          border: none;
+          width: 70%;
+        }
+        input[type="submit"] {
+          // width: 30%;
+          font-size: 15px;
+          margin: 0 5px;
+          border: none;
+          border-radius: 15px;
+          cursor: pointer;
+          background-color: $Blue-inside-call-to-action-gradient;
+          color: $White;
+          padding: 10px;
+          &:hover {
+            background-color: $Cyan-inside-call-to-action-gradient;
+          }
+        }
+      }
+    }
+  }
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 200px 40px 50px;
+    background-color: $Dark-Blue-footer-background;
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+    .contact {
+      margin-top: 30px;
+      display: flex;
+
+      justify-content: space-between;
+      .location {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 30px;
+        width: 40%;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+        p {
+          display: inline-block;
+          text-align: start;
+          width: 90%;
+          font-size: 12px;
+          color: $White;
+          opacity: 0.5;
+        }
+      }
+      .email {
+        width: 20%;
+        div {
+          display: inline-block;
+          margin: 10px 0;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          color: $White;
+          opacity: 0.5;
+        }
+        img {
+          margin-right: 10px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+      li {
+        list-style: none;
+        cursor: pointer;
+        margin: 10px;
+        color: $White;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .icon {
+        i {
+          color: $White;
+          opacity: 0.5;
+          cursor: pointer;
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }
