@@ -58,6 +58,7 @@ body #container #landing {
 body #container #landing img {
   z-index: 6565;
   width: 300px;
+  margin: 0 50px;
 }
 body #container #landing h3 {
   width: 50vw;
@@ -90,11 +91,15 @@ body main {
   width: 100%;
   background-color: hsl(218deg, 28%, 13%);
 }
-body main #body-landing .bg {
-  width: 90vw;
+body main #body-landing .bgDes {
+  width: 100vw;
   position: absolute;
   left: 0;
-  top: 29vh;
+  top: 20vh;
+  height: 100vh;
+}
+body main #body-landing .bgMo {
+  display: none;
 }
 body main #body-landing .fec {
   display: flex;
@@ -344,4 +349,130 @@ body #footer .contact .icon i {
 }
 body #footer .contact .icon i:hover {
   opacity: 1;
+}
+
+@media (max-width: 375px) {
+  body #container header ul {
+    width: 45vw;
+  }
+  body #container header ul li {
+    margin: 0;
+  }
+  body main #body-landing .bgDes {
+    display: none;
+  }
+  body main #body-landing .bgMo {
+    display: block;
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+  }
+  body #container #landing h3 {
+    font-size: 15px;
+    width: 100vw;
+  }
+  body #container #landing p {
+    width: 100vw;
+    font-size: 12px;
+  }
+  body main #body-landing .fec {
+    justify-content: center;
+  }
+  body main #body-landing .fec #con-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px;
+  }
+  body main #body-landing .fec #con-1 h3 {
+    width: 100%;
+  }
+  body main #body-landing .fec #con-1 p {
+    text-align: center;
+  }
+  body main #body-landing .fec #con-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px;
+  }
+  body main #body-landing .fec #con-2 h3 {
+    width: 100%;
+  }
+  body main #body-landing .fec #con-2 p {
+    text-align: center;
+  }
+  body main #body-landing .fec #con-3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px;
+  }
+  body main #body-landing .fec #con-3 h3 {
+    width: 100%;
+  }
+  body main #body-landing .fec #con-3 p {
+    text-align: center;
+  }
+  body main #body-landing .fec #con-4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px;
+  }
+  body main #body-landing .fec #con-4 h3 {
+    width: 100%;
+  }
+  body main #body-landing .fec #con-4 p {
+    text-align: center;
+  }
+  body main #stay {
+    justify-content: center;
+  }
+  body main #stay .para {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  body main #stay .para h3,
+body main #stay .para p {
+    text-align: center;
+  }
+  body main #commit {
+    flex-wrap: wrap;
+  }
+  body main #email {
+    padding: 25px;
+  }
+  body main #email h2 {
+    font-size: 20px;
+  }
+  body main #email p {
+    font-size: 12px;
+  }
+  body main #email .email {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main #email .email input[type=email] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  body #footer .contact {
+    flex-wrap: wrap;
+  }
+  body #footer .contact .location,
+body #footer .contact .email,
+body #footer .contact .ul1,
+body #footer .contact .ul2 {
+    width: 100%;
+    margin: 10px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

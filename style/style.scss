@@ -59,6 +59,7 @@ body {
       img {
         z-index: 6565;
         width: 300px;
+        margin: 0 50px;
       }
       h3 {
         width: 50vw;
@@ -97,14 +98,15 @@ body {
     // margin: 30px auto;
 
     #body-landing {
-      .bg {
-        width: 90vw;
+      .bgDes {
+        width: 100vw;
         position: absolute;
         left: 0;
-        top: 29vh;
-
-        // bottom: 50px;
-        // z-index: -1;
+        top: 20vh;
+        height: 100vh;
+      }
+      .bgMo {
+        display: none;
       }
       .fec {
         display: flex;
@@ -349,6 +351,94 @@ body {
           }
         }
       }
+    }
+  }
+}
+@media (max-width: 375px) {
+  body #container header ul {
+    width: 45vw;
+    li {
+      margin: 0;
+    }
+  }
+  body main #body-landing .bgDes {
+    display: none;
+  }
+  body main #body-landing .bgMo {
+    display: block;
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+  }
+  body #container #landing h3 {
+    font-size: 15px;
+    width: 100vw;
+  }
+  body #container #landing p {
+    width: 100vw;
+    font-size: 12px;
+  }
+  body main #body-landing .fec {
+    justify-content: center;
+    @for $i from 1 through 4 {
+      #con-#{$i} {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 25px;
+        h3 {
+          width: 100%;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+  body main #stay {
+    justify-content: center;
+    .para {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+  }
+  body main #commit {
+    flex-wrap: wrap;
+  }
+  body main #email {
+    padding: 25px;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .email {
+      flex-wrap: wrap;
+      justify-content: center;
+      input[type="email"] {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+  body #footer .contact {
+    flex-wrap: wrap;
+    .location,
+    .email,
+    .ul1,
+    .ul2 {
+      width: 100%;
+      margin: 10px 0;
     }
   }
 }
